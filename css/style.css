@@ -1,0 +1,544 @@
+:root {
+  --blue: #0d7180;
+  --blue-dark: #064d59;
+  --orange: #ef7957;
+  --yellow: #f6bd54;
+  --cream: #fffaf2;
+  --soft: #e8f5f1;
+  --text: #193b49;
+  --muted: #61737d;
+  --line: #dce7e6;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin: auto;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--blue-dark);
+  font-size: 21px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  margin-right: 7px;
+  border-radius: 50%;
+  color: white;
+  background: var(--blue);
+}
+
+.site-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.site-nav a {
+  padding: 9px 13px;
+  border-radius: 20px;
+  color: var(--muted);
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--blue-dark);
+  background: var(--soft);
+}
+
+/* Text */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 12px 0 18px;
+  font-size: clamp(38px, 5vw, 63px);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 34px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* Button */
+
+.button {
+  display: inline-block;
+  margin: 8px 8px 8px 0;
+  padding: 12px 21px;
+  border: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  background: var(--blue);
+  font: inherit;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.button-light {
+  border: 1px solid var(--blue);
+  color: var(--blue-dark);
+  background: transparent;
+}
+
+/* Trang chu */
+
+.hero {
+  padding: 70px 0;
+  background: linear-gradient(120deg, #dff4ef, #fff0d5);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Section */
+
+.section {
+  padding: 70px 0;
+}
+
+.section-soft {
+  background: #f0eee8;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading p:last-child {
+  max-width: 650px;
+  color: var(--muted);
+}
+
+/* Card */
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.room-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+}
+
+.city-sapa {
+  background: linear-gradient(
+    #c7ece7 0 45%,
+    #4c9b82 45% 68%,
+    #91bd60 68%
+  );
+}
+
+.city-hoian {
+  background: linear-gradient(
+    #274962 0 52%,
+    #d78657 52%
+  );
+}
+
+.city-phuquoc {
+  background: linear-gradient(
+    #b8ebed 0 52%,
+    #34aeb6 52% 78%,
+    #f0d99b 78%
+  );
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.badge {
+  color: var(--blue-dark);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Khối thông tin */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  padding: 25px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.feature-icon {
+  font-size: 35px;
+}
+
+.feature p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* Banner trang */
+
+.page-hero {
+  padding: 65px 0;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--blue-dark), var(--blue));
+}
+
+.page-hero .eyebrow {
+  color: #bde7e2;
+}
+
+.page-hero h1 {
+  margin: 10px 0;
+  font-size: 48px;
+}
+
+.page-hero p {
+  max-width: 650px;
+}
+
+/* Dat phong */
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 28px;
+}
+
+.booking-info {
+  padding: 32px;
+  border-radius: 16px;
+  color: var(--white);
+  background: var(--blue-dark);
+}
+
+.booking-info .eyebrow {
+  color: #bde7e2;
+}
+
+.booking-info p {
+  color: #d3eeeb;
+}
+
+.info-row {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.info-row strong {
+  display: block;
+  color: #bde7e2;
+  font-size: 13px;
+}
+
+.booking-form,
+.message-form {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #b8c7ca;
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--white);
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #c6ece7;
+  border-color: var(--blue);
+}
+
+textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Loai phong */
+
+.room-type-icon {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  color: var(--blue-dark);
+  background: var(--soft);
+  font-size: 65px;
+}
+
+/* Lien he */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 28px;
+}
+
+.contact-panel {
+  padding: 32px;
+  border-radius: 16px;
+  color: var(--white);
+  background: var(--blue-dark);
+}
+
+.contact-panel .eyebrow {
+  color: #bde7e2;
+}
+
+.contact-panel p {
+  color: #d3eeeb;
+}
+
+.contact-item {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.contact-item strong {
+  display: block;
+  color: #bde7e2;
+  font-size: 13px;
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 35px 0 18px;
+  color: var(--white);
+  background: #153f4e;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-box p {
+  max-width: 510px;
+  color: #b8d0d2;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #b8d0d2;
+  font-size: 14px;
+}
+
+/* Dien thoai */
+
+@media (max-width: 720px) {
+  .container {
+    width: min(100% - 30px, 560px);
+  }
+
+  .navbar {
+    min-height: auto;
+    padding: 12px 0;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .site-nav {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .site-nav a {
+    padding: 5px 7px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 45px 0;
+  }
+
+  .hero-grid,
+  .room-grid,
+  .feature-grid,
+  .booking-layout,
+  .contact-layout,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .page-hero h1 {
+    font-size: 38px;
+  }
+
+  .footer-box {
+    display: block;
+  }
+
+  .footer-nav {
+    margin-top: 18px;
+  }
+}

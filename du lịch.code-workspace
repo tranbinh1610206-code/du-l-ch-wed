@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../đặt lịch phòng/du lịch"
+		},
+		{
+			"path": "../đặt lịch phòng"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "đặt lịch phòng",
+		"liveServer.settings.port": 5501
+	}
+}
